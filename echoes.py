@@ -1,4 +1,4 @@
 #Echoes of choice
-import numpy
 import random
 credit = 0
+user_name = ''

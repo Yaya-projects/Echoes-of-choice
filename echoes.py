@@ -36,4 +36,4 @@ def choices_3 (option_a,option_b,option_c,scenario_a,scenario_b,scenario_c):
          break
       else:
          slow_print('You have written an unaccepted value/letter please write one of the following a,b,c\n',speed = 0.02)
-choices_3('bleh','bleee','boo','poof','wahhh','sniffle')
+

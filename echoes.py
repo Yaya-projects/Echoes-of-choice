@@ -1,8 +1,11 @@
 #Echoes of choice
 import time
 import random
+def cap_first_letter(text):
+    if not text:
+        return text
+    return text[0].upper() + text[1:]
 score = 0
-user_name = input('Enter your name!:').capitalize()
 Weponary_loot = ['Mythril sword','Mythril wand','Mythril sword','Mythril wand','Gorgon Artifact']
 v_rumour = {'Icey caves','Verdant forest'}
 def slow_print(text,speed = 0.06):
@@ -84,10 +87,18 @@ def Medusas_Cave():
    slow_print(f'Whilst walking,you bump into something out of nowhere.\nYou feel a sharp pain in your head as you stumble backwards to the ground.\nIt takes you sometime to recover although you are slightly bleeding.\n{dog_name} returns with some healing leaves and more flint.\nTurns out that she went to find you some healing herbs that were on the rocks and more flint.')
    slow_print(f'{dog_name} looks like a mess all mudied up and dirty.\nYou hug her and start petting her.\n She starts licking your face.\nAfter the hug,you put one of healing herbs on your injury on your head.It`s gonna heal slowly but better than nothing!')
    slow_print(f'You start thinking of any applicable solution to increase the power of the mini light spirit')
-   slow_print(f'You know?You should give him a name!It would be way easier than calling him mini light spirit..')
-   spirit_name = input('What are you gonna name the spirit!!?').capitalize()
+   slow_print(f'You know? You should give him a name!It would be way easier than calling him mini light spirit..')
+   global spirit_name
+   while True:
+    spirit_name = input('What are you gonna name the spirit!!?').strip()
+    if spirit_name:
+        break
+    else:
+        slow_print('Name cannot be empty. Please try again.')
+   spirit_name = cap_first_letter(spirit_name)
+   slow_print(f'Before you could think any further {spirit_name} starts hovering around the flint that {dog_name} had collected.')
+   #continue this later asap.
 
-slow_print(f'{user_name}')
 
 def Haunted_mansion ():
   slow_print(f'You arrive at the haunted mansion...')
@@ -111,9 +122,23 @@ def Haunt_Man_Left():
 def start_game():
      global score
      score = 0
-     global dog_name 
+     global dog_name
+     global user_name
+     while True:
+        user_name = input('What`s your name??:').strip()
+        if user_name:
+           break
+        else:
+           slow_print('Name cannot be empty. Please try again.')
+     user_name = cap_first_letter(user_name) 
      slow_print(f'{user_name} wakes up to something licking them.\n you manage to shrug the thing off lightly.\n Once you open your eyes you realise that it was just your dog trying to wake you up.')
-     dog_name = input('Wait what was your dogs name again??(The dog is a female)').capitalize()
+     while True:
+        dog_name = input('Wait what was your dogs name again??(The dog is a female btw)').strip()
+        if dog_name:
+          break
+        else:
+           slow_print('Name cannot be empty. Please try again.')
+     dog_name = cap_first_letter(dog_name)
      slow_print(f'You stand up and stretch lightly.\n You look around to find yourself under a tree in vast lush full valley.\n The valley is filled with a variety of flowers and plants!')
      slow_print(f'While walking along the valley with your beloved dog,You come across an ominous cave infront of you its entrance is a bunch of rocks that are covered with moss and vines...\n,as you look to your left far away theres an ominous haunted mansion it is emitting quite the astral aura...\n and on your right is the village you were brought up in!!\n or you could just hang out with {dog_name} in the valley a bit more!')
      slow_print(f'{dog_name} tilts her head and looks towards the cave.\nFor some reason you can sense that {dog_name} is nervous')

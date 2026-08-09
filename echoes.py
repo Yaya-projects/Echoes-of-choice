@@ -67,6 +67,14 @@ def choices_1 (option_a,):
         break
       else:
        slow_print('You have written an unaccepted value/letter please write a since there are no other options left',speed = 0.02)
+def Medusas_Cave():
+   slow_print(f'You muster up the courage to enter the cave!!')
+   slow_print(f'While you are making your way in you,you start taking a look at the insides of this cave or now rather cavern?')
+   slow_print(f'You cannot really make out the insides since there is literally no light..\nLucky for you there are some luminous shrooms around.')
+   slow_print(f'You recall from one of your classes at school related to support magic back in the village.\nThat if you chant a spell with some luminous shrooms and some gravel you can make a mini light spirit!')
+   slow_print(f'I`ve got the shrooms now what about the gravel.....?')
+   slow_print(f'Not even a second later after you`ve muttered that to yourself, {dog_name} jumps on you excidtley with a bunch of gravel stones in his mouth with a silly grin.\n You are understandablly baffled but laugh at how he looks with all those gravels in his mouth looking like a chipmunk.')
+   slow_print(f'')
 def Haunted_mansion ():
   slow_print(f'You arrive at the haunted mansion...')
   slow_print(f'You open the door gently...\nThen enter and a rush of cold wind runs past you.\nYou shiver a bit and look at {dog_name} to see that they are shivering too more than you are.')

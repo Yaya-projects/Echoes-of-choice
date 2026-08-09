@@ -52,3 +52,21 @@ def choices_1 (option_a,):
         break
       else:
        slow_print('You have written an unaccepted value/letter please write a since there are no other options left\n',speed = 0.02)
+
+
+
+
+
+
+
+
+
+
+
+
+
+def start_game():
+     global score
+     score = 0
+     slow_print(f'{user_name} wakes up to something licking them.\n {user_name} manages to shrug the thing off lightly.\n Once you open your eyes you realise that i was just your dog Buddy trying to wake you up.')
+     slow_print(f'')

@@ -73,8 +73,11 @@ def Medusas_Cave():
    slow_print(f'You cannot really make out the insides since there is literally no light..\nLucky for you there are some luminous shrooms around.')
    slow_print(f'You recall from one of your classes at school related to support magic back in the village.\nThat if you chant a spell with some luminous shrooms and some gravel you can make a mini light spirit!')
    slow_print(f'I`ve got the shrooms now what about the gravel.....?')
-   slow_print(f'Not even a second later after you`ve muttered that to yourself, {dog_name} jumps on you excidtley with a bunch of gravel stones in his mouth with a silly grin.\n You are understandablly baffled but laugh at how he looks with all those gravels in his mouth looking like a chipmunk.')
-   slow_print(f'')
+   slow_print(f'Not even a second later after you`ve muttered that to yourself, {dog_name} jumps on you excitedly with a bunch of gravel stones in his mouth with a silly grin.\n You are understandablly baffled but laugh at how he looks with all those gravels in his mouth looking like a chipmunk.')
+   slow_print(f'{dog_name} spits all the gravels on the ground so you can pick them up then spits one at you for laughing at them.')
+   slow_print(f'You yelp out in pain and once you regain your composure you glare at {dog_name}, who looks at you with innocent puppy eyes.\nYou scoff at their attempt to guilt trip you but you forgive them.')
+   slow_print(f'You chant the needed spell whilst holding the luminous shrooms and gravel in each of your hands.')
+   slow_print(f'BAM! you and {dog_name} get blinded momentarly then both of ')
 def Haunted_mansion ():
   slow_print(f'You arrive at the haunted mansion...')
   slow_print(f'You open the door gently...\nThen enter and a rush of cold wind runs past you.\nYou shiver a bit and look at {dog_name} to see that they are shivering too more than you are.')
@@ -89,7 +92,6 @@ def Haunted_mansion ():
   slow_print(f'The second is a room on the right with its door closed... but you can hear some rumbling accompanied by some low growls.')
   slow_print(f'The third is also a room smillar to the previous one but on the left and the obvious of a missing door and a pile of dust where it should be...')
   choices_3 (f'Enter the room on the right?',f'Continue walking forward in the hallway?',f'Enter the doorless room on the left?')
-
 def Haunt_Man_Left():
     slow_print(f'You open the door slowly and cautiously and tell {dog_name} to stay outside.')
     slow_print(f'The texture of the floor remains consistent even in this room but you cannot shake of the feeling that your being watched or stared at....')

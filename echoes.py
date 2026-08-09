@@ -73,7 +73,9 @@ def Haunted_mansion ():
   slow_print(f'The room is barely lit but enough just for you to be able to see just not as well compared to outside.')
   slow_print(f'As you walk around a bit and look around, you notice that the floor is not just wet but it feels like the floor is shifting with every step you take.\nThe texture of the floor and ceiling look a bit fleshy..')
   slow_print(f'While your are walking forward {dog_name} stumbles while walking due to the unnatural bending of the floor')
-  
+  slow_print(f'You stop as you realise you reached a crossed path.')
+  slow_print(f'')
+
 
 
 def start_game():

@@ -82,6 +82,10 @@ def Haunted_mansion ():
   slow_print(f'The third is also a room smillar to the previous one but on the left and the obvious of a missing door and a pile of dust where it should be...')
   choices_3 (f'Enter the room on the right?',f'Continue walking forward in the hallway?',f'Enter the doorless room on the left?')
 
+def Haunt_Man_Left():
+    slow_print(f'You open the door slowly and cautiously and tell {dog_name} to stay outside.')
+    slow_print(f'The texture of the floor remains consistent even in this room but you cannot shake of the feeling that your being watched or stared at....')
+    slow_print(f'')#continue after you finish the gorgon cave and the dogs evolution system.
 
 def start_game():
      global score

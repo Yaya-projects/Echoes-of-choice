@@ -69,13 +69,18 @@ def choices_1 (option_a,):
        slow_print('You have written an unaccepted value/letter please write a since there are no other options left',speed = 0.02)
 def Haunted_mansion ():
   slow_print(f'You arrive at the haunted mansion...')
-  slow_print(f'You open the door gently...\nYou enter and a rush of cold wind runs past you.\nYou shiver a bit and look at {dog_name} to see that they are shivering too more than you are.')
-  slow_print(f'The room is barely lit but enough just for you to be able to see just not as well compared to outside.')
-  slow_print(f'As you walk around a bit and look around, you notice that the floor is not just wet but it feels like the floor is shifting with every step you take.\nThe texture of the floor and ceiling look a bit fleshy..')
+  slow_print(f'You open the door gently...\nThen enter and a rush of cold wind runs past you.\nYou shiver a bit and look at {dog_name} to see that they are shivering too more than you are.')
+  slow_print(f'The room is barely lit but enough  for you to be able to make out the surrounding just not see as well compared to outside.')
+  slow_print(f'As you walk a bit and look around, you notice that the floor is not just wet but it feels like the floor is shifting with every step you take.\nThe texture of the floor and ceiling look a bit fleshy..')
   slow_print(f'While your are walking forward {dog_name} stumbles while walking due to the unnatural bending of the floor')
-  slow_print(f'You stop as you realise you reached a crossed path.')
-  slow_print(f'')
-
+  slow_print(f'You cant help but start giggling to yourself but your attempt to hide it is futile and {dog_name} still catches you.\n {dog_name} side eyes you and lets out a bark simillar to a pout.')
+  slow_print(f'You pet him as a form of apology.\nYou and {dog_name} continue walking for what seems like hours.')
+  slow_print(f'You arrive at some sort of lobby or living room??')
+  slow_print(f'You decide to rest up and take a break in this room as you look around you realise that the lobby leads into 3 diffrent paths.')
+  slow_print(f'The first being is that you continue walking down the hallway straight but you can hear faint whispers.\nYou reach your hand out and the air is so suffocating to the point you can feel the diffrence simply from your hands.')
+  slow_print(f'The second is a room on the right with its door closed... but you can hear some rumbling accompanied by some low growls.')
+  slow_print(f'The third is also a room smillar to the previous one but on the left and the obvious of a missing door and a pile of dust where it should be...')
+  choices_3 (f'Enter the room on the right?',f'Continue walking forward in the hallway?',f'Enter the doorless room on the left?')
 
 
 def start_game():

@@ -81,9 +81,13 @@ def Medusas_Cave():
    slow_print(f'{dog_name}shakes her tail and starts barking esctatically whilst hopping around showing how proud she is of your achievement!!')
    slow_print(f'You pet her and give her a treat.\nYou start heading in deeper now with your magical light source.\nYou notice that there are bunch of lush on the stones and there are a variety of stones such as limestone!')
    slow_print(f'Every now and then you hear some slithering noises but you brush it off..\nYou head in deeper consequently the magical light you summoned`s effectivness diminishes as it is getting more darker.')
-   slow_print(f'Whilst walking,you bump into something out of nowhere.\nYou feel a sharp pain in your head as you stumble backwards to the ground.\nIt takes you sometime to recover although you are slightly bleeding.\n{dog_name} returns with some healing leaves and more flint.\nTurns out that t{dog_name} went to find you some healing herbs that were on the rocks and more flint.')
-   slow_print(f'{dog_name} looks like a mess all mudied up and dirty.\nYou hug them and start petting them')
+   slow_print(f'Whilst walking,you bump into something out of nowhere.\nYou feel a sharp pain in your head as you stumble backwards to the ground.\nIt takes you sometime to recover although you are slightly bleeding.\n{dog_name} returns with some healing leaves and more flint.\nTurns out that she went to find you some healing herbs that were on the rocks and more flint.')
+   slow_print(f'{dog_name} looks like a mess all mudied up and dirty.\nYou hug her and start petting her.\n She starts licking your face.\nAfter the hug,you put one of healing herbs on your injury on your head.It`s gonna heal slowly but better than nothing!')
+   slow_print(f'You start thinking of any applicable solution to increase the power of the mini light spirit')
+   slow_print(f'You know?You should give him a name!It would be way easier than calling him mini light spirit..')
+   spirit_name = input('What are you gonna name the spirit!!?').capitalize()
 
+slow_print(f'{user_name}')
 
 def Haunted_mansion ():
   slow_print(f'You arrive at the haunted mansion...')

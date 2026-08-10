@@ -87,7 +87,7 @@ def Medusas_Cave():
    slow_print(f'Whilst walking,you bump into something out of nowhere.\nYou feel a sharp pain in your head as you stumble backwards to the ground.\nIt takes you sometime to recover although you are slightly bleeding.\n{dog_name} returns with some healing leaves and more flint.\nTurns out that she went to find you some healing herbs that were on the rocks and more flint.')
    slow_print(f'{dog_name} looks like a mess all mudied up and dirty.\nYou hug her and start petting her.\n She starts licking your face.\nAfter the hug,you put one of healing herbs on your injury on your head.It`s gonna heal slowly but better than nothing!')
    slow_print(f'You start thinking of any applicable solution to increase the power of the mini light spirit')
-   slow_print(f'You know? You should give him a name!It would be way easier than calling him mini light spirit..')
+   slow_print(f'You know? You should give him a name! It would be way easier than calling him mini light spirit..')
    global spirit_name
    while True:
     spirit_name = input('What are you gonna name the spirit!!?').strip()
@@ -97,9 +97,14 @@ def Medusas_Cave():
         slow_print('Name cannot be empty. Please try again.')
    spirit_name = cap_first_letter(spirit_name)
    slow_print(f'Before you could think any further {spirit_name} starts hovering around the flint that {dog_name} had collected.')
-   #continue this later asap.
-
-
+   slow_print(f'You process what {spirit_name} is trying to convey.\nYou pick up the flints and hold {spirit_name} in each of your hands and chant once more.')
+   slow_print(f'{spirit_name} starts glowing more brightly and they light up the cavern making it more clear.')
+   slow_print(f'You look around for what you bumped into.It turns out to be sort of statue very niche.')    
+   slow_print(f'Wait huh...?No it could not possibly be right...?\nThe statue..It was once a human too...\nIt`s head fell off from the impact with you and it`s bleeding..This isn`t safe....You need to go now.')
+   slow_print(f'While you`re trying to escape frantically you and {dog_name}..\nYou realise you`re lost.. and can`t find the exit..You both continue runnig either way.')
+   slow_print(f'You spot a place in the cave with some sunshine seeping through.You sprint over there along with {dog_name} and {spirit_name}')
+   slow_print(f'You arrive there...but oh this isn`t any better there`s even more statues simillar to the previous ones...\nLooks like you made your way to that creatures lair.')
+   slow_print(f'You start hearing some slithering and hisses')
 def Haunted_mansion ():
   slow_print(f'You arrive at the haunted mansion...')
   slow_print(f'You open the door gently...\nWhile entering, a rush of cold wind greets you.\nYou shiver a bit in response then look at {dog_name} to see that she is shivering way more than you are.')

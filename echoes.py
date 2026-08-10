@@ -132,9 +132,16 @@ def Medusas_Cave():
        bond_update(5) 
        score_update(6) 
    elif choice =='B':
-      slow_print('')   
+      slow_print('You bash the creature multiple times in the head with a random sharp stone')  
+      slow_print('Its grip tightens and scurries back in hiding') 
+   else:
+     if score > 7:
+      slow_print(f'You manage to barely push that thing off your body.\nYou pull away barley.')
+     else:
+       if dog_bond >= 30:
+       slow_print('You try to push it off but you fail miserably ')
 def Medusa_fight():
-   
+   slow_print(f'')
 def Haunted_mansion ():
   slow_print(f'You arrive at the haunted mansion...')
   slow_print(f'You open the door gently...\nWhile entering, a rush of cold wind greets you.\nYou shiver a bit in response then look at {dog_name} to see that she is shivering way more than you are.')

@@ -5,6 +5,7 @@ def cap_first_letter(text):
     if not text:
         return text
     return text[0].upper() + text[1:]
+dog_bond = 25
 score = 0
 Weponary_loot = ['Mythril sword','Mythril wand','Mythril sword','Mythril wand','Gorgon Artifact']
 v_rumour = {'Icey caves','Verdant forest'}
@@ -13,6 +14,13 @@ def slow_print(text,speed = 0.06):
       print(charachter, end = "",flush = True)
       time.sleep(speed)
    print()
+def bond_update(added_score):
+  global dog_bond
+  dog_bond += added_score
+  if dog_bond >= 25:
+    slow_print(f'Your current bond with {dog_name} is {dog_bond}!!',speed = 0.04) 
+  else:
+    slow_print(f'Your current score is {dog_bond}...',speed = 0.04)
 def score_update(added_score):
   global score 
   score += added_score
@@ -28,10 +36,9 @@ def choices_4 (option_a,option_b,option_c,option_d):
       slow_print(f'B:{option_b}')
       slow_print(f'C:{option_c}')
       slow_print(f'D:{option_d}')
-      global choice
       choice = input('What have you chosen:').upper()
       if choice in ['A','B','C','D']:
-        break
+        return choice 
       else:
        slow_print('You have written an unaccepted value/letter please write one of the following a,b,c,d',speed = 0.02)
 def choices_3 (option_a,option_b,option_c):
@@ -44,7 +51,7 @@ def choices_3 (option_a,option_b,option_c):
       global choice
       choice = input('What have you chosen:').upper()
       if choice in ['A','B','C']:
-        break
+        return choice 
       else:
        slow_print('You have written an unaccepted value/letter please write one of the following a,b,c',speed = 0.02)
 def choices_2 (option_a,option_b):
@@ -56,7 +63,7 @@ def choices_2 (option_a,option_b):
       global choice
       choice = input('What have you chosen:').upper()
       if choice in ['A','B']:
-        break
+        return choice 
       else:
        slow_print('You have written an unaccepted value/letter please write one of the following a,b',speed = 0.02)
 def choices_1 (option_a,):
@@ -67,7 +74,7 @@ def choices_1 (option_a,):
       global choice
       choice = input('What have you chosen:').upper()
       if choice in ['A']:
-        break
+        return choice 
       else:
        slow_print('You have written an unaccepted value/letter please write a since there are no other options left',speed = 0.02)
 def Medusas_Cave():
@@ -78,8 +85,15 @@ def Medusas_Cave():
    slow_print(f'I`ve got the shrooms now what about the gravel.....?')
    slow_print(f'Not even a second later after you`ve muttered that to yourself, {dog_name} jumps on you excitedly with a bunch of gravel stones in her mouth with a silly grin.\n You are understandablly baffled but laugh at how she looks with all those gravels in her mouth looking like a chipmunk.')
    slow_print(f'{dog_name} spits all the gravels on the ground so you can pick them up then spits one at you for laughing at them.')
-   slow_print(f'You yelp out in pain and once you regain your composure you glare at {dog_name}, who looks at you with innocent puppy eyes.\nYou scoff at ther attempt to guilt trip you but you forgive her.')
-   slow_print(f'You chant the needed spell whilst holding the luminous shrooms and gravel in each of your hands.')
+   slow_print(f'You yelp out in pain and once you regain your composure you glare at {dog_name}, who looks at you with innocent puppy eyes.')
+   choices_2('Forgive her.','Scold her')
+   if choice == 'A':
+      slow_print('You scoff at her attempt to guilt trip you but you forgive her.')
+      bond_update(5)
+   else:
+      slow_print('You scold her harshly and tell her to be more carefull next time because she did hurt you.')
+      bond_update(-5)
+   slow_print(f'After that, You chant the needed spell whilst holding the luminous shrooms and gravel in each of your hands.')
    slow_print(f'BAM! you and {dog_name} get blinded momentarly.\nAfter a few seconds both of you regain their vision.\nYou and {dog_name} find a luminous floating orb infront of you two.')
    slow_print(f'{dog_name}shakes her tail and starts barking esctatically whilst hopping around showing how proud she is of your achievement!!')
    slow_print(f'You pet her and give her a treat.\nYou start heading in deeper now with your magical light source.\nYou notice that there are bunch of lush on the stones and there are a variety of stones such as limestone!')
@@ -88,7 +102,6 @@ def Medusas_Cave():
    slow_print(f'{dog_name} looks like a mess all mudied up and dirty.\nYou hug her and start petting her.\n She starts licking your face.\nAfter the hug,you put one of healing herbs on your injury on your head.It`s gonna heal slowly but better than nothing!')
    slow_print(f'You start thinking of any applicable solution to increase the power of the mini light spirit')
    slow_print(f'You know? You should give him a name! It would be way easier than calling him mini light spirit..')
-   global spirit_name
    while True:
     spirit_name = input('What are you gonna name the spirit!!?').strip()
     if spirit_name:
@@ -105,6 +118,10 @@ def Medusas_Cave():
    slow_print(f'You spot a place in the cave with some sunshine seeping through.You sprint over there along with {dog_name} and {spirit_name}')
    slow_print(f'You arrive there...but oh this isn`t any better there`s even more statues simillar to the previous ones...\nLooks like you made your way to that creatures lair.')
    slow_print(f'You start hearing some slithering and hisses')
+   slow_print(f'Out of nowhere something lunges at you and pins you to the ground')
+   slow_print(f'You closed you eyes just barely in time...You didn`t have enough time to witness the creature')
+   choices_3(f'Call for {dog_name} to help you.',f'Grab a shard of stone from nearby and bash that things head..',f'Try to push it off')
+
 def Haunted_mansion ():
   slow_print(f'You arrive at the haunted mansion...')
   slow_print(f'You open the door gently...\nWhile entering, a rush of cold wind greets you.\nYou shiver a bit in response then look at {dog_name} to see that she is shivering way more than you are.')

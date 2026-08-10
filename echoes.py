@@ -121,7 +121,20 @@ def Medusas_Cave():
    slow_print(f'Out of nowhere something lunges at you and pins you to the ground')
    slow_print(f'You closed you eyes just barely in time...You didn`t have enough time to witness the creature')
    choices_3(f'Call for {dog_name} to help you.',f'Grab a shard of stone from nearby and bash that things head..',f'Try to push it off')
-
+   if choice == 'A':
+    if dog_bond >= 30:
+       slow_print(f'{dog_name} bites firmly on that things tail and injures it badly.')
+       slow_print(f'It pulls away and you manage to carry {dog_name} and hide behind a statue to recollect yourself')
+       bond_update(10)
+       score_update(10)
+    else:
+       slow_print(f'{dog_name} reluctantly helps you by biting it just enough for it to back off for a few seconds')
+       bond_update(5) 
+       score_update(6) 
+   elif choice =='B':
+      slow_print('')   
+def Medusa_fight():
+   
 def Haunted_mansion ():
   slow_print(f'You arrive at the haunted mansion...')
   slow_print(f'You open the door gently...\nWhile entering, a rush of cold wind greets you.\nYou shiver a bit in response then look at {dog_name} to see that she is shivering way more than you are.')

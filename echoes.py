@@ -129,17 +129,28 @@ def Medusas_Cave():
        score_update(10)
     else:
        slow_print(f'{dog_name} reluctantly helps you by biting it just enough for it to back off for a few seconds')
+       slow_print(f'You take this chance to hide behind one of the statues and you whisper to {dog_name} to follow you.\n You don`t make it that far tho.')
        bond_update(5) 
        score_update(6) 
    elif choice =='B':
-      slow_print('You bash the creature multiple times in the head with a random sharp stone')  
-      slow_print('Its grip tightens and scurries back in hiding') 
+      slow_print('You grunt as you try your hardest to reach out for a sharp stone nearby.\n You barely manage to grip it and then you start bashing the creature`s head multiple times.')  
+      slow_print('Eventually it`s grip loosens and it backs off momentarly.') 
+      slow_print(f'You take this chance to hide behind one of the statues and you whisper to {dog_name} to follow you.')
+      slow_print(f'You and {dog_name} catch your breaths')
    else:
      if score > 7:
       slow_print(f'You manage to barely push that thing off your body.\nYou pull away barley.')
+      slow_print(f'You scurry over behind a statue holding your breath while signing to {dog_name} to come here quietly')
+      slow_print(f'{dog_name} crawls over to you and hides behind another statue close by..')
      else:
        if dog_bond >= 30:
-       slow_print('You try to push it off but you fail miserably ')
+        slow_print('You try to push it off but you fail miserably.')
+        slow_print(f'Luckily {dog_name}  manages to throw some sand with her tail in that things eyes to blind it temporarly then drags you behind a statue nearby')
+       else:
+          slow_print('You try to push it off but you fail miserably.')
+          slow_print('While trying to push it off, It bites you making you yelp in pain and open your eyes to meet it`s gaze...')
+          slow_print(f'Before you could react even your turned to stone...')
+        
 def Medusa_fight():
    slow_print(f'')
 def Haunted_mansion ():

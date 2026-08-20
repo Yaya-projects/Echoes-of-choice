@@ -147,10 +147,10 @@ def Medusas_Cave():
         slow_print('You try to push it off but you fail miserably.')
         slow_print(f'Luckily {dog_name}  manages to throw some sand with her tail in that things eyes to blind it temporarly then drags you behind a statue nearby')
        else:
-          slow_print('You try to push it off but you fail miserably.')
-          slow_print('While trying to push it off, It bites you making you yelp in pain and open your eyes to meet it`s gaze...')
-          slow_print(f'Before you could react even your turned to stone...')
-        
+          slow_print(f'You try to push it off but you fail miserably.')
+          slow_print(f'While trying to push it off, It bites you making you yelp in pain and open your eyes to meet it`s gaze...')
+          slow_print(f'Before you could even react you notice that you can`t move your lower half...\nYou look down to see that your lower half has become stone..and whatever that thing did..\nIt appears that it`s like a disease it continues spreading around your body and right before it reaches your head\n.You shout at {dog_name} to run away')
+          slow_print(f'{dog_name} starts running away and as he looks behind him one last time..He realises thay you have fully become stone..Like the surrounding statues...',0.07)
 def Medusa_fight():
    slow_print(f'')
 def Haunted_mansion ():
@@ -171,6 +171,10 @@ def Haunt_Man_Left():
     slow_print(f'You open the door slowly and cautiously and tell {dog_name} to stay outside.')
     slow_print(f'The texture of the floor remains consistent even in this room but you cannot shake of the feeling that your being watched or stared at....')
     slow_print(f'')#continue after you finish the gorgon cave and the dogs evolution system.
+def Valley():
+   slow_print(f'You traverse the valley along side with {dog_name}.')
+   slow_print(f'After walking for a while, both of you arrive at a beautiful field filled with flowrs and a singular oak tree!!')
+   choices_3(f'Collect some flowers.',f'Play with {dog_name} a bit.','Walk a bit more.')
 
 def start_game():
      global score

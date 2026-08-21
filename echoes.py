@@ -171,23 +171,47 @@ def Haunt_Man_Left():
     slow_print(f'You open the door slowly and cautiously and tell {dog_name} to stay outside.')
     slow_print(f'The texture of the floor remains consistent even in this room but you cannot shake of the feeling that your being watched or stared at....')
     slow_print(f'')#continue after you finish the gorgon cave and the dogs evolution system.
+def flowers_valley():
+    slow_print(f'You start wandering around the terrain and collect flowers.\n A few minutes later,You`ve collected quite alot of flowers.\nYou look over to see what {dog_name} is doing..')
+    slow_print(f'Turns out she has been collecting flowers alongside you!!') 
+    choices_2(f'You thank her.',f'Compliment her')
+    if  choice == 'A':
+      slow_print(f'You take the flowers that she had collected, adding it to your collection and thank her for helping!')
+      bond_update(2)
+    else:
+      slow_print('You add the flowers which she collected to your collection and take a pink flower and put it on her ear.')
+      slow_print(f'You say: There! You look much more adorable like this {dog_name}')
+      bond_update(5)
+def play_valley ():
+   slow_print(f'You initiate a race with {dog_name} and the finish line is the tree over there!')
+   slow_print('You count down 1...2...3 and the race begins!!')
+   slow_print('Both of you start sprinting with all your might towards the tree.')
+   slow_print(f'In the end,{dog_name} beat ya to it!!')
+   slow_print('You start mumbling about how it was unfair.')
+   slow_print(f'{dog_name} looks at you with a smug look.')
+   slow_print(f'You look at her,noticing her smug expression, and you can`t help but laugh at her.')
+   bond_update(10)
+   slow_print('You rest under the tree a bit before deciding you should do something else.')  
+def leave_valley():
+   slow_print(f'You and {dog_name} start heading back to the location you woke up in.')
+   slow_print(f'')
 def Valley():
    slow_print(f'You traverse the valley along side with {dog_name}.')
    slow_print(f'After walking for a while, both of you arrive at a beautiful field filled with flowers and there`s a lone oak tree!!')
    choices_3(f'Collect some flowers.',f'Play with {dog_name} a bit.',f'Walk a bit more.')
    if choice == 'A':
-      slow_print(f'You start wandering around the terrain and collect flowers.\n A few minutes later,You`ve collected quite alot of flowers.\nYou look over to see what {dog_name} is doing..')
-      slow_print(f'Turns out she has been collecting flowers alongside you!!') 
-      choices_2(f'You thank her.',f'Compliment her')
-      if  choice == 'A':
-         slow_print(f'You take the flowers that she had collected, adding it to your collection and thank her for helping!')
-         dog_bond(2)
-      else:
-         slow_print('You add the flowers which she collected to your collection and take a pink flower and put it on her ear.')
-         slow_print(f'You say: There! You look much more adorable like this {dog_name}')
-         dog_bond(5)
+      flowers_valley()
    elif choice == 'B':
-      slow_print(f'You initiate a race with {dog_name} and start')
+      play_valley()
+      choices_3(f'Play catch with {dog_name}.',f'Collect some flowers.',f'Go back to where you woke up.')
+      if choice == 'A':
+         slow_print(f'You take one of the twigs that fell down from the tree then throw it far.\n{dog_name} starts chasing it and brings it back.')
+         slow_print(f'You repeat this for a few times before both of you start getting bored')
+         bond_update(5)
+         choices_2(f'Collect some flowers.',f'Go back to where you woke up.')
+         if choice == 'A':
+            flowers_valley()
+         else:
       
 
 

@@ -182,6 +182,7 @@ def flowers_valley():
       slow_print('You add the flowers which she collected to your collection and take a pink flower and put it on her ear.')
       slow_print(f'You say: There! You look much more adorable like this {dog_name}')
       bond_update(5)
+    slow_print('Both of you sit down amist the beautiful flowery terrain.\n You think about what to do next.')
 def play_valley ():
    slow_print(f'You initiate a race with {dog_name} and the finish line is the tree over there!')
    slow_print('You count down 1...2...3 and the race begins!!')
@@ -192,32 +193,54 @@ def play_valley ():
    slow_print(f'You look at her,noticing her smug expression, and you can`t help but laugh at her.')
    bond_update(10)
    slow_print('You rest under the tree a bit before deciding you should do something else.')  
+def catch_valley ():
+   slow_print(f'You take one of the twigs that fell down from the tree then throw it far.\n{dog_name} starts chasing it and brings it back.')
+   slow_print(f'You repeat this for a few times before both of you start getting bored')
+   bond_update(5)
 def leave_valley():
    slow_print(f'You and {dog_name} start heading back to the location you woke up in.')
-   slow_print(f'')
+   slow_print(f'You arrive and you see the same structures you saw at the begining : The cave , The haunted mansion and the village.\n There`s also the valley but you already explored that')
+   choices_3(f'Head to the haunted mansion.',f'Head to the cave',f'Head to the village.')
 def Valley():
    slow_print(f'You traverse the valley along side with {dog_name}.')
    slow_print(f'After walking for a while, both of you arrive at a beautiful field filled with flowers and there`s a lone oak tree!!')
-   choices_3(f'Collect some flowers.',f'Play with {dog_name} a bit.',f'Walk a bit more.')
+   choices_2(f'Collect some flowers.',f'Play with {dog_name} a bit.')
    if choice == 'A':
       flowers_valley()
-   elif choice == 'B':
+   else:
       play_valley()
       choices_3(f'Play catch with {dog_name}.',f'Collect some flowers.',f'Go back to where you woke up.')
       if choice == 'A':
-         slow_print(f'You take one of the twigs that fell down from the tree then throw it far.\n{dog_name} starts chasing it and brings it back.')
-         slow_print(f'You repeat this for a few times before both of you start getting bored')
-         bond_update(5)
+         catch_valley()
          choices_2(f'Collect some flowers.',f'Go back to where you woke up.')
          if choice == 'A':
             flowers_valley()
          else:
-      
+            leave_valley()
+      elif choice == 'B':
+         flowers_valley()
+         choices_2(f'Play with {dog_name}.',f'Go back to where you woke up.')
+         if choice == 'A':
+            play_valley()
+            choices_2(f'Play catch with {dog_name}.',f'Go back to where you woke up.')
+            if choice == 'A':
+              catch_valley()
+              slow_print('You practically explored all of the valley.\nThere`s really nothing left to do.')
+              slow_print('You decide to head back to where you came from.')
+              leave_valley()
+         else:
+            leave_valley()
+      else:
+         leave_valley()
+
+
 
 
 def start_game():
      global score
+     global dog_bond
      score = 0
+     dog_bond = 25
      global dog_name
      global user_name
      while True:

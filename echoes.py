@@ -173,8 +173,23 @@ def Haunt_Man_Left():
     slow_print(f'')#continue after you finish the gorgon cave and the dogs evolution system.
 def Valley():
    slow_print(f'You traverse the valley along side with {dog_name}.')
-   slow_print(f'After walking for a while, both of you arrive at a beautiful field filled with flowrs and a singular oak tree!!')
-   choices_3(f'Collect some flowers.',f'Play with {dog_name} a bit.','Walk a bit more.')
+   slow_print(f'After walking for a while, both of you arrive at a beautiful field filled with flowers and there`s a lone oak tree!!')
+   choices_3(f'Collect some flowers.',f'Play with {dog_name} a bit.',f'Walk a bit more.')
+   if choice == 'A':
+      slow_print(f'You start wandering around the terrain and collect flowers.\n A few minutes later,You`ve collected quite alot of flowers.\nYou look over to see what {dog_name} is doing..')
+      slow_print(f'Turns out she has been collecting flowers alongside you!!') 
+      choices_2(f'You thank her.',f'Compliment her')
+      if  choice == 'A':
+         slow_print(f'You take the flowers that she had collected, adding it to your collection and thank her for helping!')
+         dog_bond(2)
+      else:
+         slow_print('You add the flowers which she collected to your collection and take a pink flower and put it on her ear.')
+         slow_print(f'You say: There! You look much more adorable like this {dog_name}')
+         dog_bond(5)
+   elif choice == 'B':
+      slow_print(f'You initiate a race with {dog_name} and start')
+      
+
 
 def start_game():
      global score

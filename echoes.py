@@ -151,8 +151,13 @@ def Medusas_Cave():
           slow_print(f'While trying to push it off, It bites you making you yelp in pain and open your eyes to meet it`s gaze...')
           slow_print(f'Before you could even react you notice that you can`t move your lower half...\nYou look down to see that your lower half has become stone..and whatever that thing did..\nIt appears that it`s like a disease it continues spreading around your body and right before it reaches your head\n.You shout at {dog_name} to run away')
           slow_print(f'{dog_name} starts running away and as he looks behind him one last time..He realises thay you have fully become stone..Like the surrounding statues...',0.07)
-def Medusa_fight():
-   slow_print(f'')
+def Medusa_encounter():
+   slow_print(f'You`re starting to panic and wondering what to do....\n {dog_name} looks at you with worried eyes..')
+   choices_3(f'Attempt to communicate.',f'Search for any usable weapon.',f'Attempt to run away.')
+   if choice == 'A':
+      
+
+
 def Haunted_mansion ():
   slow_print(f'You arrive at the haunted mansion...')
   slow_print(f'You open the door gently...\nWhile entering, a rush of cold wind greets you.\nYou shiver a bit in response then look at {dog_name} to see that she is shivering way more than you are.')
@@ -171,6 +176,10 @@ def Haunt_Man_Left():
     slow_print(f'You open the door slowly and cautiously and tell {dog_name} to stay outside.')
     slow_print(f'The texture of the floor remains consistent even in this room but you cannot shake of the feeling that your being watched or stared at....')
     slow_print(f'')#continue after you finish the gorgon cave and the dogs evolution system.
+
+
+
+
 def flowers_valley():
     slow_print(f'You start wandering around the terrain and collect flowers.\n A few minutes later,You`ve collected quite alot of flowers.\nYou look over to see what {dog_name} is doing..')
     slow_print(f'Turns out she has been collecting flowers alongside you!!') 

@@ -179,7 +179,15 @@ def Medusa_encounter():
                   slow_print(f'Before you could even react...{dog_name} jumps in pushing the creature away from you and helps you up.\n Both of you start dashing out quickly.')
                   slow_print(f'As you`re dashing you can hear the creature yell out:  I THOUGHT YOU DIDN`T CARE FOR THAT HUMAN!!')
                   slow_print(f'You look back at the creature and you can it`s shape and discover it was medusa..')
+                  slow_print(f'You take a moment to recover.')
                   choices_2(f'Thank {dog_name}.','Continue on.')
+                  if choice == 'A':
+                     slow_print(f'You thank {dog_name} and pat her.')
+                     slow_print(f'She wags her tail ins response as if saying I`m glad your safe')
+                     bond_update(5)
+                     slow_print(f'You think of what to do next.')
+                  else:
+                     slow_print(f'You think of what to do next.')
                else:
                   slow_print(f'As you are walking towards the exit you hear some slithering noises and you notice {dog_name} is striding a bit further than you`d expect behind you.')
                   slow_print(f'Right before you take a step outside, something  grabs you from the ceiling..')
@@ -194,9 +202,11 @@ def Medusa_encounter():
                      slow_print('You embrace yourself mentally accepting your fate..')
                      slow_print(f'You lie there fully transformed into a statue infront of the cave..Hopefully warning whoever comes next.')
          else:
-   elif choice == 'B':
-      
 
+   
+      elif choice == 'B':
+        slow_print('wtbr')# change later
+ 
 
 def Haunted_mansion ():
   slow_print(f'You arrive at the haunted mansion...')

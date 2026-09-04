@@ -77,7 +77,7 @@ def choices_1 (option_a,):
         return choice 
       else:
        slow_print('You have written an unaccepted value/letter please write a since there are no other options left',speed = 0.02)
-def Medusas_Cave():
+def Medusas_Cave():  
    slow_print(f'You muster up the courage to enter the cave!!')
    slow_print(f'While you are making your way in you,you start taking a look at the insides of this cave or now rather cavern?')
    slow_print(f'You cannot really make out the insides since there is literally no light..\nLucky for you there are some luminous shrooms around.')
@@ -119,7 +119,7 @@ def Medusas_Cave():
    slow_print(f'You arrive there...but oh this isn`t any better there`s even more statues simillar to the previous ones...\nLooks like you made your way to that creatures lair.')
    slow_print(f'You start hearing some slithering and hisses')
    slow_print(f'Out of nowhere something lunges at you and pins you to the ground')
-   slow_print(f'You closed you eyes just barely in time...You didn`t have enough time to witness the creature')
+   slow_print(f'You closed you eyes just barely in time...You didn`t have enough time to witness the creature.\nNonetheless you can still hear mutliple slithering and hissing sounds as if they`re are multiple snakes present')
    choices_3(f'Call for {dog_name} to help you.',f'Grab a shard of stone from nearby and bash that things head..',f'Try to push it off')
    if choice == 'A':
     if dog_bond >= 30:
@@ -152,33 +152,33 @@ def Medusas_Cave():
           slow_print(f'Before you could even react you notice that you can`t move your lower half...\nYou look down to see that your lower half has become stone..and whatever that thing did..\nIt appears that it`s like a disease it continues spreading around your body and right before it reaches your head\n.You shout at {dog_name} to run away')
           slow_print(f'{dog_name} starts running away and as he looks behind him one last time..He realises thay you have fully become stone..Like the surrounding statues...',0.07)
 def Medusa_encounter():
-   slow_print(f'You`re starting to panic and wondering what to do....\n {dog_name} looks at you with worried eyes..')
+   slow_print(f'You`re starting to panic and wonder what to do....\n {dog_name} looks at you with worried eyes..')
    choices_3(f'Attempt to communicate.',f'Search for any usable weapon.',f'Attempt to run away.')
    if choice == 'A':
       slow_print(f'What will you say to the creature??')
-      score_update(2)
+      score_update(-2)
       choices_3(f'Why are you trying to hurt me?!',f'Can you calm down!I`m not trying to hurt you!!',f'Leave me alone!!You freak!!')
       if choice =='A':
          slow_print(f'You yell out in confusion: Why are you trying to hurt me?!\n The creature responds in a short raspy voice: T-T-This is...My..HoMe..')
          slow_print(f'You mutter in confusion: This is your home..?\nThe creature: You walk into my home UNINVITED.. with the intetion to scavenge for anything you want.\nThen you have the audacity to get angry at me trying to defend it.')    
-         slow_print(f'You respond and say: Soo....Uhm..\nThe creature says in a hostile tone: Get out..and I won`t harm you...')
+         slow_print(f'{user_name}: Soo....Uhm..\nThe creature says in a hostile tone: I shall leave you with 2 choices human...GET PUT or meet your maker.')
          slow_print(f'{dog_name} looks at you nervously awating your descision.')
-         choices_2(f'Listen to her and leave with {dog_name}.',f'Stay and explore.')
+         choices_2(f'Listen to her and leave with {dog_name}.',f'Listen to her but before leaving demand recompansation.',f'Stay and explore.')
          if choice == 'A':
             slow_print(f'You decide to leave with {dog_name}.')
             score_update(2)
             if dog_bond >= 50:
-               slow_print(f'As you are leaving you can sense that the creature is looking at {dog_name} and is moved by how close you have gotten together.')
-               slow_print(f'True to their word, the creature lets you leave and escape.')
-               slow_print(f'You look around deciding what do next you and {dog_name} agree that you are not going back in there..')
+               slow_print(f'As you are leaving you can sense that the creature`s gaze is still on you.\nWhile walking away you add the pieces together and deduce from the statues and the sound of the snakes that the creature infront of you isn`t a wild animal.\nBut rather Medusa..')
+               slow_print(f'You can hear her mumbling about how {dog_name} seems to have grown quite fond of you and she wouldn`t want to upset her.')
+               slow_print(f'True to her word, Medusa lets you leave and escape.')
+               slow_print(f'You look around deciding what do next.')
             else:
-               slow_print(f'The creature takes a good look at {dog_name} and notices that she isn`t as concerned with you as it had hoped.')
+               slow_print(f'As you are leaving you can sense that the creature`s gaze is still on you.\nWhile walking away you add the pieces together and deduce from the statues and the sound of the snakes that the creature infront of you isn`t a wild animal.\nBut rather Medusa..')
                if dog_bond >= 40:
                   slow_print(f'As you are walking towards the exit you hear some slithering noises and you notice {dog_name} is striding a bit further than you`d expect behind you.')
                   slow_print(f'Right before you take a step outside, something  grabs you from the ceiling..')
-                  slow_print(f'Before you could even react...{dog_name} jumps in pushing the creature away from you and helps you up.\n Both of you start dashing out quickly.')
-                  slow_print(f'As you`re dashing you can hear the creature yell out:  I THOUGHT YOU DIDN`T CARE FOR THAT HUMAN!!')
-                  slow_print(f'You look back at the creature and you can it`s shape and discover it was medusa..')
+                  slow_print(f'Before you could even react...{dog_name} jumps in pushing Medusa away from you and helps you up.\n Both of you start dashing out quickly.')
+                  slow_print(f'As you`re running away you can hear Medusa say : I must`ve mistaken their bond together..such a shame they would`ve made a great meal.')
                   slow_print(f'You take a moment to recover.')
                   choices_2(f'Thank {dog_name}.','Continue on.')
                   if choice == 'A':
@@ -201,9 +201,38 @@ def Medusa_encounter():
                   else:
                      slow_print('You embrace yourself mentally accepting your fate..')
                      slow_print(f'You lie there fully transformed into a statue infront of the cave..Hopefully warning whoever comes next.')
-         else:
+         elif choice == 'B':
+            slow_print('You deduce from the statues and the sound of the snakes that the creature infront of you isn`t a wild animal but rather Medusa.')
+            slow_print('You take the precaution of closing your eyes until you are sure that she is no where near you and tell Buddy to do the same.')
+            slow_print('You decide to leave but before doing so you demand from Medusa a recompensation for what she has put you through.')
+            slow_print('Medusa responds: Very well then human..I`ll humour you just this one time..')
+            slow_print('You follow Medusa`s voice till she guides you the treasure room and leaves.')
+            slow_print('Buddy barks confirming that she had left.')
+            slow_print('You open your eyes to see a room full of treasures.')
+            slow_print('There`s a chest in the middle of the room.')
+            choices_2(f'Take multiple treasures.',f'Open the chest.')
+            if choice == 'A':
+               slow_print(f'You decide to take multiple treasures from the room.')
+               slow_print(f'{dog_name} looks at you with dissaproval.')
+               slow_print(f'A swift and sudden gust of wind passes you it seems it`s from the entrance.')
+               slow_print(f'Before you could even react a snake`s eyes stares directly into yours.')
+               slow_print(f'Then multiple other snakes come into view.')
+               slow_print(f'Medusa makes her way to you and the snakes retract to her hair.')
+               slow_print(f'Medusa : PFFFT AHAHAHAH not only did you have the AUDACITY TO ASK FOR ``RECOMPENSATION``.\n Medusa: You go ahead and decide and take more than one thing.Your greed sickens me.')
+               slow_print(f'Medusa: Awhh it`s such a pityyyyyy that you`re gonna die any minute now!\nMedusa: but really applaud to you for getting this far you`re the first statue in the treasure room! consider it an honor')
+               slow_print(f'You look down at your lower half and notice that it`s turning to stone.\nThe petrification has begun and it looks like it`s not stopping any time soon as it`s spreading to the rest of your body.')
+               if dog_bond >= 50:
+                   slow_print(f'You quickly signal to {dog_name} to run away and not come back.')
+                   slow_print(f'You decide to stall Medusa by talking to give {dog_name} a chance to run.\n {user_name}: I mean yeah it is my bad but yk what is funnier?The snake pile on your head feels like it`s forced there..')
+                   slow_print(f'{user_name} : and yk? What would you be without your snakes?')
+                   slow_print(f'Medusa is agitated and furious.\nMedusa : HOW DARE YOU! My SNAKES ARE MY COMPANIONS THEY ADORE MY PRESENCESE')
+                   slow_print(f'{dog_name} uses this chance to find a burrow and enter it she looks at you..\nYou give her one last reassuring smile and signal her to go.')
+                   slow_print(f'She gives a quick wine before leaving.')
+                   slow_print(f'Medusa: speaking of companions.. Where`s that nasty little pet of yours??.\nShe looks around in confusion.')
+                   slow_print(f'')
 
-   
+
+            
       elif choice == 'B':
         slow_print('wtbr')# change later
  

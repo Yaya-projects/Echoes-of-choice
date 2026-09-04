@@ -225,14 +225,25 @@ def Medusa_encounter():
                    slow_print(f'You quickly signal to {dog_name} to run away and not come back.')
                    slow_print(f'You decide to stall Medusa by talking to give {dog_name} a chance to run.\n {user_name}: I mean yeah it is my bad but yk what is funnier?The snake pile on your head feels like it`s forced there..')
                    slow_print(f'{user_name} : and yk? What would you be without your snakes?')
-                   slow_print(f'Medusa is agitated and furious.\nMedusa : HOW DARE YOU! My SNAKES ARE MY COMPANIONS THEY ADORE MY PRESENCESE')
+                   slow_print(f'Medusa is agitated and furious.\nMedusa : HOW DARE YOU! My SNAKES ARE MY COMPANIONS THEY ADORE MY PRESENCESE AND WE ARE ONE ENTITY.')
                    slow_print(f'{dog_name} uses this chance to find a burrow and enter it she looks at you..\nYou give her one last reassuring smile and signal her to go.')
                    slow_print(f'She gives a quick wine before leaving.')
                    slow_print(f'Medusa: speaking of companions.. Where`s that nasty little pet of yours??.\nShe looks around in confusion.')
-                   slow_print(f'')
-
-
-            
+                   slow_print(f'The petrification has made its way to just a little above of your mouth.')
+                   slow_print(f'You close your eyes accepting your fate and accept your fate peacefully knowing {dog_name} is safe.')
+                   slow_print(f'You`ve completly turned into a stone statue infront of the gate of the treasure room becoming a mere decoration.')
+               else:
+                  slow_print(f'Medusa: OH RIGHT! and don`t think i forgot about your little buddy!!\n She says whilst yanking {dog_name}.\nMedusa: {dog_name} was it??')
+                  slow_print(f'Medusa: Hmmmm let me seee!! I`ll do ya one last favor before you turn completly into stone.')
+                  slow_print(f'Medusa: I won`t give your friend a peacefull death as opposed to you.That wouldn`t be fun now would it??')
+                  slow_print(f'She says as all her snakes stretch and wrap themselves around her and bite into her spreading poison in her body.')
+                  slow_print(f'{dog_name} starts coughing up blood tainted with the poison.')
+                  slow_print(f'You watch in horror as Medusa continues torturing your companion.')
+                  slow_print(f'Medusa gives a signal to the snakes thus they begin stretching {dog_name}`s body till it splits in half spewing blood and poison infront of you and some on you.')
+                  slow_print(f'You can`t even protest since what`s left of your body to petrify was your eyes and as soon as you witness {dog_name}`s death you follow her shortly.')
+                  slow_print(f'You completly turn into a stone statue stained with the blood of your companion infront of the gate of the treasure room becoming a mere decoration.')
+                  slow_print(f'Their remains splattered everywhere infront of the gate.')
+            else:
       elif choice == 'B':
         slow_print('wtbr')# change later
  

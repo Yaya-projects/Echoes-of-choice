@@ -7,6 +7,7 @@ def cap_first_letter(text):
     return text[0].upper() + text[1:]
 dog_bond = 25
 score = 0
+buddy_status = ''
 Weponary_loot = ['Mythril sword','Mythril wand','Mythril sword','Mythril wand','Gorgon Artifact']
 v_rumour = {'Icey caves','Verdant forest'}
 def slow_print(text,speed = 0.06):
@@ -28,6 +29,32 @@ def score_update(added_score):
     slow_print(f'Your current score is {score}!!',speed = 0.04) 
   else:
     slow_print(f'Your current score is {score}...',speed = 0.04)
+def buddy_update(evolution_name):
+      global buddy_status
+      buddy_status = f'{evolution_name}'
+      slow_print(f'{dog_name} has successfully evolved into {buddy_status}')
+      if buddy_status == f'a Stone Guardian':
+         score_update(10)
+         bond_update(5)
+      elif buddy_status == f'an Glacier Wolf':
+           
+      elif buddy_status == f'a Dryad Hound':
+
+      elif buddy_status == f'an Everdawn Guardian':
+
+      elif buddy_status == f'a Glacier Warden':
+
+      else:
+         slow_print('And...Nothing happened!')
+def treasure_randomiser ():
+   treasure = random.choice(Weponary_loot)
+   slow_print(f'You found a {treasure}!!')
+   if treasure == 'Mythril sword':
+      score_update(5)
+   elif treasure == 'Mythril wand':
+      score_update(5)
+   else:
+      score_update(10)
 def choices_4 (option_a,option_b,option_c,option_d):
     slow_print(f'Now it is the time for you to make a descion {user_name}')
     while True:
@@ -244,6 +271,12 @@ def Medusa_encounter():
                   slow_print(f'You completly turn into a stone statue stained with the blood of your companion infront of the gate of the treasure room becoming a mere decoration.')
                   slow_print(f'Their remains splattered everywhere infront of the gate.')
             else:
+               slow_print(f'You walk into the middle of the room.')
+               slow_print(f'You slowly open the chest.')
+               treasure_randomiser()
+               slow_print(f'You')
+
+
       elif choice == 'B':
         slow_print('wtbr')# change later
  
@@ -338,8 +371,10 @@ def Valley():
 def start_game():
      global score
      global dog_bond
+     global buddy_status
      score = 0
      dog_bond = 25
+     buddy_status = ''
      global dog_name
      global user_name
      while True:
